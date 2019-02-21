@@ -1,0 +1,42 @@
+﻿@model Rehber.MVC.Models.AdresViewModel
+
+@{
+    ViewBag.Title = "AdresSil";
+}
+
+<h2>AdresSil</h2>
+
+
+@using (Html.BeginForm("AdresSil", "Adres", FormMethod.Post))
+{@Html.AntiForgeryToken()
+<div>
+    <h4>AdresViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.İl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.İlce)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İlce)
+        </dd>
+        @ViewBag.AdSoyad
+    </dl>
+
+
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    
+</div>
+}
